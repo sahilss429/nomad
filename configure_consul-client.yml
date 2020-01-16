@@ -1,0 +1,10 @@
+- name: Install and configure consul clients
+  hosts: consul
+  become: true
+  user: ansible
+  gather_facts: no
+  become_method: sudo
+  vars_files:
+   - group_vars/all
+  roles:
+   - role: consul-client

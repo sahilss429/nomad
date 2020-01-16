@@ -1,0 +1,4 @@
+---
+- import_playbook: configure_zookeeper.yml
+- import_playbook: configure_mesos-master.yml
+- import_playbook: configure_marathon.yml

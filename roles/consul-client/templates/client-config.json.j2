@@ -1,0 +1,13 @@
+{
+  "bind_addr": "{{ inventory_hostnames }}",
+  "advertise_addr": "{{ inventory_hostnames }}",
+  "client_addr": "0.0.0.0",
+  "encrypt": "Luj2FZWwlt8475wD1WtwUQ==",
+  "datacenter": "dc1",
+  "log_level": "INFO",
+  "retry_join": ["{{ inventory_hostnames }}"],
+  "limits": {
+    "rpc_rate": 10000
+  },
+  "discovery_max_stale": "1000ms"
+}
