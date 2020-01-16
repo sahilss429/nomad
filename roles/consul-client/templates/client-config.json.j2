@@ -2,10 +2,9 @@
   "bind_addr": "{{ inventory_hostname }}",
   "advertise_addr": "{{ inventory_hostname }}",
   "client_addr": "0.0.0.0",
-  "encrypt": " {{ encrypt_var }}",
   "datacenter": "dc1",
   "log_level": "INFO",
-  "retry_join": ["{{ leader }}"],
+  "retry_join": ["192.168.10.10"],
   "limits": {
     "rpc_rate": 10000
   },

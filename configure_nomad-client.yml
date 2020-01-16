@@ -1,8 +1,8 @@
 - name: Install and configure nomad clients with consul
   hosts: clients
   become: true
-  user: ansible
-  gather_facts: no
+  user: ubuntu
+  gather_facts: yes
   become_method: sudo
   vars_files:
    - group_vars/all
