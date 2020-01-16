@@ -28,22 +28,21 @@
     src: consul.service
     dest: /etc/systemd/system/
 
-- name: Create consul.d directory
+- name: "Create consul.d directory"
   file:
-    path: {{ item }}
+    path: "{{ item }}"
     state: directory
     mode: '0755'
     owner: consul
     group: consul
-    with_items:
-      - /etc/consul.d
-      - /opt/consul
+  with_items:
+    - /etc/consul.d
+    - /opt/consul
 
 - name: Create server-config.json
   template:
     src: server-config.json.j2
     dest: /etc/consul.d/server-config.json
-    state: touch
     mode: '0640'
     owner: consul
     group: consul

@@ -31,15 +31,14 @@
     mode: '0755'
     owner: consul
     group: consul
-    with_items:
-      - /etc/consul.d
-      - /opt/consul
+  with_items:
+    - /etc/consul.d
+    - /opt/consul
 
 - name: Create client-config.json
   template:
     src: client-config.json.j2
     dest: /etc/consul.d/client-config.json
-    state: touch
     mode: '0640'
     owner: consul
     group: consul
