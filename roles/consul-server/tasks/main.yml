@@ -19,6 +19,10 @@
     home: /etc/consul.d
     system: true
 
+- name: register encrypt_var
+  shell: cat /opt/consul/serf/local.keyring |tr -d '"[]'
+  register: encrypt_var
+
 - name: writing systemd file for consul
   copy:
     src: consul.service
